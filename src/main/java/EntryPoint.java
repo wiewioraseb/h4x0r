@@ -1,3 +1,7 @@
+import Sort.BubbleSort;
+
+import java.util.Arrays;
+
 public class EntryPoint {
     public static void main(String[] args) {
         System.out.println("Start");
@@ -12,7 +16,14 @@ public class EntryPoint {
         boolean isPalindrome2 = ep.checkIfPalindromeClassic(text2);
         System.out.println("String " + text2 + " is palindrome: " + isPalindrome2);
 
-        ep.fizzBuzz();
+//        ep.fizzBuzz();
+
+        System.out.println("Factorial: " + ep.factorial(15));
+
+        BubbleSort bubbleSort = new BubbleSort();
+        int[] arrayToSort = { 19, 13, 3, 20, 9, 4, 5, 1, 5, 11, 8 };
+        int[] sorted = bubbleSort.start(arrayToSort);
+        System.out.println("Sorted array " + Arrays.toString(sorted));
     }
 
     private boolean checkIfPalindromeClassic(String text) {
@@ -42,5 +53,8 @@ public class EntryPoint {
         }
     }
 
+    private int factorial(int param) {
+        return param > 1 ? param * factorial(param - 1) : param;
+    }
 
 }
