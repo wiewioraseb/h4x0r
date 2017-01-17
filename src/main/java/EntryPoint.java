@@ -6,9 +6,13 @@ public class EntryPoint {
         System.out.println("Palindrome");
         String text = "ikajaki";
         boolean isPalindrome = ep.checkIfPalindromeClassic(text);
-        System.out.println("String " + text + "is palindrome: " + isPalindrome);
+        System.out.println("String " + text + " is palindrome: " + isPalindrome);
 
+        String text2 = "abbaakkaabba";
+        boolean isPalindrome2 = ep.checkIfPalindromeClassic(text2);
+        System.out.println("String " + text2 + " is palindrome: " + isPalindrome2);
 
+        ep.fizzBuzz();
     }
 
     private boolean checkIfPalindromeClassic(String text) {
@@ -18,5 +22,25 @@ public class EntryPoint {
             result = chText[i] == chText[chText.length-1 - i];
         }
         return result;
+    }
+
+    /*
+    * Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz”
+    * instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples
+    * of both three and five print “FizzBuzz”.
+    * */
+    private void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.print(i + " ");
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else
+            if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else
+            if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }
+        }
     }
 }
