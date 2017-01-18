@@ -23,7 +23,6 @@ public class EntryPoint {
         BubbleSort bubbleSort = new BubbleSort();
         int[] arrayToSort = { 19, 13, 3, 20, 9, 4, 5, 1, 5, 11, 8 };
         int[] sorted = bubbleSort.start(arrayToSort);
-        System.out.println("Sorted array " + Arrays.toString(sorted));
     }
 
     private boolean checkIfPalindromeClassic(String text) {
