@@ -22,7 +22,7 @@ public class EntryPoint {
         System.out.println("Factorial: " + ep.factorial(15));
 
         BubbleSort bubbleSort = new BubbleSort();
-        int[] arrayToSort = { 19, 13, 3, 20, 9, 4, 5, 1, 5, 11, 8, 1, 11, 14, 15 };
+        int[] arrayToSort = { 33, 19, 13, 3, 20, 9, 4, 5, 1, 5, 11, 8, 1, 11, 14, 15, 1 };
 //        int[] sortedBubble = bubbleSort.start(arrayToSort);
 
         InsertionSort insertionSort = new InsertionSort();
