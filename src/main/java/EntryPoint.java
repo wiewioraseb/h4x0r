@@ -59,6 +59,14 @@ public class EntryPoint {
     }
 
     private int factorial(int param) {
+/*      // Without StackOverflow
+        int f = 1;
+        for(int i = 1; i <= param; i++) {
+            f *= i;
+        }
+        return f;
+*/
+
         return param > 1 ? param * factorial(param - 1) : param;
     }
 
