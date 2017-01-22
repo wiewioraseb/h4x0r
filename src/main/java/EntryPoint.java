@@ -10,7 +10,7 @@ public class EntryPoint {
         EntryPoint ep = new EntryPoint();
 
         System.out.println("Palindrome");
-        String text = "ikajaki";
+        String text = "bkajaki";
         boolean isPalindrome = ep.checkIfPalindromeClassic(text);
         System.out.println("String " + text + " is palindrome: " + isPalindrome);
 
@@ -31,10 +31,13 @@ public class EntryPoint {
     }
 
     private boolean checkIfPalindromeClassic(String text) {
-        boolean result = false;
+        boolean result = true;
         char[] chText = text.toCharArray();
         for (int i = 0; i < chText.length / 2; i++) {
-            result = chText[i] == chText[chText.length-1 - i];
+            if (chText[i] != chText[chText.length-1 - i]){
+                result = false;
+                break;
+            }
         }
         return result;
     }
